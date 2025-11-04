@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Job Search</title>
+    <link rel="stylesheet" href="W4D1.css">
 </head>
 
 <body>
@@ -21,7 +22,7 @@
     <ul id="resultsList"></ul>
 
     <script>
-        // ---- Funzione di ricerca (PARTE 1) ----
+
         function searchJobs(jobTitle, jobLocation) {
             const titleLower = jobTitle.toLowerCase();
             const locationLower = jobLocation.toLowerCase();
@@ -38,7 +39,7 @@
             };
         }
 
-        // ---- Array fornito (NON modificare) ----
+
         const jobs = [
             { title: "Marketing Intern", location: "US, NY, New York" },
             { title: "Customer Service - Cloud Video Production", location: "NZ, Auckland" },
@@ -78,7 +79,7 @@
             { title: "English Teacher Abroad", location: "US, NY, Saint Bonaventure" },
         ];
 
-        // ---- Gestione evento bottone ----
+
         document.getElementById("searchBtn").addEventListener("click", function () {
             const titleInput = document.getElementById("titleInput").value;
             const locationInput = document.getElementById("locationInput").value;
@@ -88,7 +89,7 @@
             console.log("Risultati trovati:", searchResult);
 
             const resultsList = document.getElementById("resultsList");
-            resultsList.innerHTML = ""; // puliamo la lista
+            resultsList.innerHTML = "";
 
             if (searchResult.count === 0) {
                 resultsList.innerHTML = "<li>Nessun risultato trovato</li>";
